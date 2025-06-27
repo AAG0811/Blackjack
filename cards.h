@@ -124,7 +124,7 @@ void drawCard(Hand *hand, Deck *deck) {
     // ensuring hand is initialised 
     if (hand->cardsInHand < 0) hand->cardsInHand = 0;
     if (hand->cards == NULL && hand->cardsInHand == 0) {
-        hand->cards = malloc(sizeof(Card));
+        hand->cards = (Card *)malloc(sizeof(Card));
     } else {   
         // increase size of dynamic array and check for allocation error
         hand->cards = (Card *)realloc(hand->cards, (hand->cardsInHand+1) * sizeof(Card)); // +1 because cards hasn't been incremented yet
