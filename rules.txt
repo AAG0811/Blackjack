@@ -1,0 +1,44 @@
+Gameplay Overview
+
+    Initial Deal:
+
+        Each player gets 2 cards face up.
+
+        The dealer gets 1 card face up and 1 card face down (the “hole” card).
+
+    Player's Turn:
+
+        You may choose to:
+
+            Hit – Take another card.
+
+            Stand – Keep your current hand.
+
+            Double Down – Double your bet, take one more card, then stand.
+
+            Split – If you have two cards of the same value, split them into two hands (requires an additional bet).
+
+            Surrender (if allowed) – Give up your hand and get half your bet back.
+
+    Dealer's Turn:
+
+        The dealer reveals the hole card.
+
+        Must hit until reaching at least 17.
+
+            In most casinos, dealer must hit on soft 17 (Ace + 6 = 17), but rules vary.
+
+        If the dealer busts (goes over 21), all remaining players win.
+
+Winning
+
+    Your hand is closer to 21 than the dealer’s without busting → You win.
+
+    Your hand equals 21 with first 2 cards (Ace + 10-card) → Blackjack (usually pays 3:2).
+
+    Your hand ties with the dealer → Push (you get your bet back).
+
+    Your hand goes over 21 → Bust → You lose.
+
+    Dealer has a better hand → You lose.
+
