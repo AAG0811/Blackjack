@@ -11,5 +11,12 @@ game.o: game.c game.h
 	gcc -c game.c
 
 .PHONY: clean
+
+ifeq ($(OS),Windows_NT)
+	CLEAN_CMD = del game.exe *.o
+else
+	CLEAN_CMD = rm game *.o
+endif
 clean:
-	rm game *.o
+	$(CLEAN_CMD)
+	
