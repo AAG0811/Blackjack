@@ -50,32 +50,5 @@ int main() {
 
     endGame(&gm);
 
-    // setup gamedeck 
-    // Deck gameDeck = {NULL, 0};
-    // createDeck(&gameDeck);
-    
-    // // initialise player hand
-    // Hand myhand = {NULL, 0};
-    // drawCard(&myhand, &gameDeck);
-    // drawCard(&myhand, &gameDeck);
-    // displayHand(&myhand);
-
-    // drawCard(&myhand, &gameDeck);
-    // displayHand(&myhand);
-
-    // /*
-    // Hand/Deck data layout
-
-    // Hand {
-    //     cards {
-    //         Card{face = A, value = 11}, Card{8, 8}, Card{10, 10}
-    //     }
-    //     cardsInHand = 3
-    // }
-    
-    // */
-    // // free dynamic memory used
-    // freeHand(&myhand);
-    // freeHand(&gameDeck);
     return 0;
 }
