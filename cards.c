@@ -1,5 +1,34 @@
 #include "cards.h"
 
+// template for displaying playing cards in the terminal
+// stored as a list of strings for each horizontal line in the glyph
+// const char* cardBase[] = {
+//     "/-----\\",
+//     "|%s   |",
+//     "|     |",
+//     "|   %s|",
+//     "\\-----/"
+// };
+// \033[47m\033[30m - white bg black text
+const char* cardBase[] = {
+    "\033[1m╭─────╮\033[0m",
+    "\033[1m│%s   │\033[0m",
+    "\033[1m│     │\033[0m",
+    "\033[1m│   %s│\033[0m",
+    "\033[1m╰─────╯\033[0m",
+
+};
+// the amount of lines in the card graphic
+// could use sizeof but since card graphic wont be changing, the number is hardcoded
+// stored as a variable so it is easy to change
+const int linesInCard = 5;
+
+// loop through all values to create complete 'deck' of cards
+// variables to store all possible cards when creating the deck of cards
+// the Ace card is stored as 11 but game logic code will also consider it as a 1
+const char* faces[13] = {"A ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "10", "J ", "Q ", "K "};
+const int values[13] = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
+
 // function to create a logical deck of cards 
 void createDeck(Deck* dest) {
     // 13 different cards; 4 suits

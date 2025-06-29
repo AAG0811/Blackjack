@@ -23,6 +23,8 @@ the deck doesn't need to be randomised due to the card being chosen from a rando
 while not being the same as a real deck of cards it simulates the deck being shuffled without the time it takes to rearrange the array several times.
 therefore the actual order of the deck is the order cards are randomly pulled from it and not as they are stored in the array.
 */
+#ifndef CARDS_H
+#define CARDS_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -37,24 +39,10 @@ therefore the actual order of the deck is the order cards are randomly pulled fr
 //     "\\-----/"
 // };
 // \033[47m\033[30m - white bg black text
-const char* cardBase[] = {
-    "\033[1m╭─────╮\033[0m",
-    "\033[1m│%s   │\033[0m",
-    "\033[1m│     │\033[0m",
-    "\033[1m│   %s│\033[0m",
-    "\033[1m╰─────╯\033[0m",
-
-};
-// the amount of lines in the card graphic
-// could use sizeof but since card graphic wont be changing, the number is hardcoded
-// stored as a variable so it is easy to change
-const int linesInCard = 5;
-
-// loop through all values to create complete 'deck' of cards
-// variables to store all possible cards when creating the deck of cards
-// the Ace card is stored as 11 but game logic code will also consider it as a 1
-const char* faces[13] = {"A ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "10", "J ", "Q ", "K "};
-const int values[13] = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
+extern const char* cardBase[];
+extern const int linesInCard;
+extern const char* faces[13];
+extern const int values[13];
 
 // basic key/value struct to store card info
 typedef struct {
@@ -85,3 +73,4 @@ void displayHand(Hand *hand);
 
 // free memory used
 void freeHand(Hand *hand);
+#endif

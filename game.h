@@ -20,6 +20,8 @@ on a players turn they will have the option to:
     Split – If you have two cards of the same value, split them into two hands (requires an additional bet).
 
 */
+#ifndef GAME_H
+#define GAME_H
 #include "cards.h"
 
 typedef struct {
@@ -52,3 +54,4 @@ void newRound(GameManager *gm);
 
 // free memory used in game
 void endGame(GameManager *gm);
+#endif

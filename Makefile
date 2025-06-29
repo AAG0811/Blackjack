@@ -1,10 +1,15 @@
-.PHONY: test clean game
+game: main.o cards.o game.o
+	gcc main.o cards.o game.o -o game
 
-game: main.c
-	gcc main.c -o game
+main.o: main.c cards.h game.h
+	gcc -c main.c
 
-test: game
-	./game
+cards.o: cards.c cards.h
+	gcc -c cards.c
 
+game.o: game.c game.h
+	gcc -c game.c
+
+.PHONY: clean
 clean:
-	rm game
+	rm game *.o
